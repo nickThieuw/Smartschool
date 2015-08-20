@@ -1,0 +1,75 @@
+//Font kleur over de hele webpagina//
+$bodyFontColor:white;
+$h1Color:white;
+
+//speciale kleur voor de titels en onderkant van de webpaginas voor de ouders//
+$OudersH1Color:darkblue;
+$OudersH2Color:darkblue;
+$OnderKantWebOudersFontColor:black;
+
+//Kleur voor de buttons die je terugvind op de webpagina's//
+$ColorBtnSubmit:purple;
+$ColorBtnSubmitHoverFocusText:white !important;
+$ColorBtnSubmitHoverFocus:#8E5391;
+
+//kleur voor de navigatiebalk//
+$NavbarLinkColor:white;
+$NavbarLinkColorHoverFocus:orchid;
+$NavbarAffixH1:darkblue;
+$NavbarAffixLinks:darkblue;
+$NavbarAffixActiveLinks:darkgreen;
+$NavbarAffixDropdownlink:darkgreen;
+$NavbarAffixLinksHoverFocus:darkgreen;
+$DropdownMenuLinkColor:darkblue !important;
+$DropdownMenuLinkColorHoverFocus:darkgreen !important;
+//mobiele versie//
+$MobileNavbarH1Color:darkblue;
+$MobileNavbarLinkColor:darkblue;
+$MobileNavbarLinkColorHoverFocus:darkgreen;
+$MobileNavbarDropdownColor:darkgreen;
+$MobileNavbarActiveLinkColor:darkgreen;
+
+//caroussel//
+$CarousselItemBackground:#777;
+$CarousselItemMobileBackground:#777;
+$CarousselCaptionColor:black;
+$CarousselCaptionHeaderColor:darkblue;
+$CarousselCaptionbackground:purple;
+
+//font kleur van de footer//
+$footerColor:orchid;
+$CustomFooterLoginBGColor:rgba(0, 0, 0, 0.66);
+$CustomFooterLoginLinks:orchid;
+$PostedByLabelColor:white;
+
+//kleuren voor de links die je terugvind op de webpagina van de ouders//
+$LinkYoutubeOuders:darkred;
+$LinkTwitterOuders:#00aced;
+$LinkFacebookOuders:#3b5998;
+$LinkRestOuders:#8CA834;
+
+//kleur voor de borders die je terugvind op de webpaginas van aanwezigheidslijst en overgangslijst//
+$BorderColorGoed:#90c85f;
+$BorderColorFout:#b94a48;
+
+//collapse die je terugvind op de detailpagina van de leerling//
+$ColorCollapse:white;
+$ColorCollapseHoverFocus:orchid;
+
+//kleuren van de forms//
+$VerwerkenFormInputBorder:white;
+$FormLinkColorHoverFocus:#D62522;
+$FormLoginLabelColor:white;
+$FormLoginTitleLabelColor:white;
+
+//kleuren voor de links die je terugvind op de webpagina van de leerkrachten//
+$LeerkrachtLinksVTBorderColor:purple;
+$LeerkrachtLinksVTLinkColor:purple;
+
+$BerichtenLinksVTBorderColor:darkred;
+
+$formBerichtColor:darkblue;
+$formBerichtColorHoofding:darkgreen;
+
+$ColorBtnReset:darkred;
+$ColorBtnResetHoverFocus:#FF5252;

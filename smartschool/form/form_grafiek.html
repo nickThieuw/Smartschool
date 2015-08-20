@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--Inputkontrole met pdf-form-validation.js-->
+<html>
+    <head>
+        <title>form pdf creator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/pdf-creator-form.css" rel="stylesheet">
+        <script src="js/pdf-form-validation.js"></script>
+    </head>
+    <body>
+        <aside class="rapport">
+            <form action="a_grafiek_test.php" method="post" name="myform" target="blank" onsubmit="return checkform(this);
+                    return null;"> 
+                <fieldset> <legend>Rapport</legend>
+                    <label id="vnaam">Voornaam:</label> <input type="text" id="voornaam" name="voornaam"/>
+                    <label id="fnaam">Familienaam:</label> <input type="text" id="familienaam" name="familienaam"/>
+                    <label id="trim">Trimester: </label><input type="text" id="trimester" name="trimister"/>
+                    <label id="klasid">Klas: </label><input type="text" id="klas" name="klas"/>
+                    <input type="submit" name="submit" id="button" value="Maak"/>
+                </fieldset>
+            </form>
+        </aside>
+
+    </body>
+</html>

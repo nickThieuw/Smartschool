@@ -1,0 +1,914 @@
+/*@font-face*/
+/*De font 'existence_light'*/
+@font-face {
+  font-family: 'existence_light';
+  src: url("../fonts/existence_light/Existence-Light-webfont.eot");
+  src: url("../fonts/existence_light/Existence-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/existence_light/Existence-Light-webfont.woff") format("woff"), url("../fonts/existence_light/Existence-Light-webfont.ttf") format("truetype"), url("../fonts/existence_light/Existence-Light-webfont.svg#existence_lightregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*de font 'blokletters_potloodpotlood'*/
+@font-face {
+  font-family: 'blokletters_potloodpotlood';
+  src: url("../fonts/potlood/Blokletters-Potlood-webfont.eot");
+  src: url("../fonts/potlood/Blokletters-Potlood-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/potlood/Blokletters-Potlood-webfont.woff") format("woff"), url("../fonts/potlood/Blokletters-Potlood-webfont.ttf") format("truetype"), url("../fonts/potlood/Blokletters-Potlood-webfont.svg#blokletters_potloodpotlood") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*Standaard*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*Body voor zowel leerkracht als admin*/
+body {
+  margin: 0;
+  background: url("../images/BGimages/bgHomeInlog.jpg") repeat;
+  color: white; }
+
+/*Body voor Ouders*/
+#bodyOuders hr {
+  border-color: darkblue; }
+#bodyOuders h2 {
+  color: darkblue !important; }
+#bodyOuders .OnderWebDetailOuders {
+  font-family: 'existence_light';
+  font-size: 1.1em;
+  color: black; }
+
+/*Titel klassen*/
+h1, h2 {
+  color: white !important;
+  font-family: blokletters_potloodpotlood !important;
+  margin-left: 1em !important; }
+
+h2 {
+  margin-left: 0em !important;
+  margin-bottom: 0.5em; }
+
+h3 {
+  font-family: 'existence_light';
+  font-size: 1.25em !important;
+  font-weight: bold; }
+
+/*Vormgeving van de forms, zowel buttons als de */
+form label {
+  font-family: existence_light;
+  color: white;
+  font-weight: bold; }
+form.formDes [type="submit"] {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: purple;
+  border-color: purple;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 1em black; }
+  form.formDes [type="submit"]:hover, form.formDes [type="submit"]:focus {
+    background-color: #8E5391;
+    border-color: #8E5391;
+    box-shadow: 0 0 0.2em black !important;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+form.BerichtBekijken {
+  margin-bottom: 2.5%; }
+  form.BerichtBekijken textarea {
+    background: none;
+    color: blue;
+    width: 80%;
+    height: 150px;
+    margin: 2% 0; }
+  form.BerichtBekijken input[type="submit"], form.BerichtBekijken form.Berichten input[type="reset"], form.Berichten form.BerichtBekijken input[type="reset"] {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: purple;
+    border-color: purple;
+    margin-bottom: 1em;
+    box-shadow: 0em 0em 1em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+    form.BerichtBekijken input[type="submit"]:hover, form.BerichtBekijken form.Berichten input[type="reset"]:hover, form.Berichten form.BerichtBekijken input[type="reset"]:hover, form.BerichtBekijken input[type="submit"]:focus, form.BerichtBekijken form.Berichten input[type="reset"]:focus, form.Berichten form.BerichtBekijken input[type="reset"]:focus {
+      background-color: #8E5391;
+      border-color: #8E5391;
+      box-shadow: 0 0 0.2em black;
+      -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+      transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+form.Berichten {
+  width: 80%;
+  background: url("../images/BGimages/linedpaper.png");
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  box-shadow: 0 0 1em black; }
+  form.Berichten label {
+    color: darkblue; }
+  form.Berichten select {
+    font-family: blokletters_potloodpotlood;
+    font-weight: bold;
+    height: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 1px black dashed;
+    outline: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    outline: 0;
+    color: darkblue; }
+  form.Berichten input[type="text"] {
+    font-family: blokletters_potloodpotlood;
+    font-weight: bold;
+    height: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 1px black dashed;
+    outline: 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    outline: 0;
+    color: darkgreen; }
+  form.Berichten textarea {
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 1px black dashed;
+    outline: 0;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    outline: 0;
+    color: darkblue; }
+  form.Berichten input[type="submit"], form.Berichten input[type="reset"] {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: purple;
+    border-color: purple;
+    margin-bottom: 1em;
+    box-shadow: 0 0 1em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+    form.Berichten input[type="submit"]:hover, form.Berichten input[type="reset"]:hover, form.Berichten input[type="submit"]:focus, form.Berichten input[type="reset"]:focus {
+      background-color: #8E5391;
+      border-color: #8E5391;
+      box-shadow: 0 0 0.2em black;
+      -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+      transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+  form.Berichten input[type="reset"] {
+    background-color: darkred;
+    border-color: darkred;
+    box-shadow: 0 0 1em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+    form.Berichten input[type="reset"]:hover, form.Berichten input[type="reset"]:focus {
+      background-color: #FF5252;
+      border-color: #FF5252;
+      box-shadow: 0 0 0.2em black;
+      -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+      transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+form.Verwerken input[type="text"], form.Verwerken input[type="number"], form.Verwerken input[type="email"], form.Verwerken input[type="password"] {
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid white;
+  outline: 0;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: white; }
+form.Verwerken input[type="submit"], form.Verwerken form.Berichten input[type="reset"], form.Berichten form.Verwerken input[type="reset"] {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 16px;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: purple;
+  border-color: purple;
+  margin-bottom: 1em;
+  box-shadow: 0 0 1em black;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+  form.Verwerken input[type="submit"]:hover, form.Verwerken form.Berichten input[type="reset"]:hover, form.Berichten form.Verwerken input[type="reset"]:hover, form.Verwerken input[type="submit"]:focus, form.Verwerken form.Berichten input[type="reset"]:focus, form.Berichten form.Verwerken input[type="reset"]:focus {
+    background-color: #8E5391;
+    border-color: #8E5391;
+    box-shadow: 0 0 0.2em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+form.Verwerken a {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+  form.Verwerken a:hover, form.Verwerken a:focus {
+    -webkit-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    color: #D62522; }
+form.Verwerken label {
+  font-size: 12px;
+  font-weight: 400; }
+form.VerwerkenWit input[type="number"] {
+  color: darkblue !important;
+  border-bottom: 1px solid darkblue; }
+form.login {
+  width: 250px;
+  margin: 0 auto; }
+  form.login label, form.login a {
+    font-size: 12px;
+    font-weight: 400;
+    color: white; }
+  form.login input[type="submit"], form.login form.Berichten input[type="reset"], form.Berichten form.login input[type="reset"] {
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: purple;
+    border-color: purple;
+    box-shadow: 0 0 1em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+
+/*checkbox voor webpaginas met overgang*/
+#overgang input[type="checkbox"].checkbox {
+  display: none; }
+  #overgang input[type="checkbox"].checkbox + label {
+    position: absolute;
+    border: 5px outset #b94a48;
+    width: 90%;
+    height: 95%;
+    /*label styling*/
+    vertical-align: baseline;
+    white-space: nowrap;
+    box-shadow: inset 0.1em 0.1em 1em black;
+    margin-left: -3px;
+    margin-top: -2px;
+    cursor: pointer;
+    cursor: hand; }
+  #overgang input[type="checkbox"].checkbox:checked + label {
+    border: 5px solid #90c85f;
+    box-shadow: none; }
+
+/*Staandaard buttonvormgeving voor alle buttons*/
+.btnVormgeving {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 1em;
+  letter-spacing: 1px;
+  background-color: purple;
+  border-color: purple;
+  margin-bottom: 0.5em;
+  box-shadow: 0 0 1em black;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+  .btnVormgeving:hover, .btnVormgeving:focus {
+    color: white !important;
+    background-color: #8E5391;
+    border-color: #8E5391;
+    box-shadow: 0 0 0.2em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+
+/*Navigatiebalk*/
+.nav-brand:hover, .nav-brand:focus {
+  text-decoration: none !important;
+  cursor: default; }
+
+.nav {
+  font-family: 'existence_light' !important;
+  font-size: 1.1em !important;
+  font-weight: bold; }
+  .nav .active a {
+    background: none !important;
+    color: orchid !important;
+    border-bottom: orchid solid 1px !important; }
+
+/*Volledige achtergrond avn de navigatie*/
+.navbar {
+  background: none;
+  color: white;
+  border: 0; }
+  .navbar li > a:link, .navbar li > a:visited {
+    color: white; }
+  .navbar li > a:hover, .navbar li > a:focus, .navbar li > a:active {
+    background: none !important;
+    color: orchid !important;
+    border-bottom: orchid solid 1px !important; }
+
+/*De dropdownmenu van de navigatiebalk*/
+.dropdown-menu {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  width: 125% !important;
+  background: url("../images/BGimages/linedpaper.png"); }
+  .dropdown-menu > li > a:link, .dropdown-menu > li > a:visited {
+    color: darkblue !important;
+    border-bottom: none !important;
+    font-weight: bold; }
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: darkgreen !important;
+    border-bottom: none !important; }
+
+/*Wanneer je naar beneden scrollt op de webpagina verandert de achtergrond van de navigatiebalk, dit is de CSS code hiervoor*/
+#nav.affix {
+  background: url("../images/BGimages/linedpaper.png");
+  padding-bottom: 0.5em;
+  box-shadow: 0 0 1em black; }
+  #nav.affix h1, #nav.affix h2 {
+    color: darkblue !important; }
+  #nav.affix ul li a:link, #nav.affix ul li a:visited {
+    color: darkblue !important; }
+  #nav.affix ul li a:hover, #nav.affix ul li a:focus {
+    color: darkgreen !important;
+    border-bottom-color: darkgreen !important; }
+  #nav.affix ul .active a:link, #nav.affix ul .active a:visited {
+    color: darkgreen !important;
+    border-bottom-color: darkgreen !important; }
+  #nav.affix .dropdown-menu {
+    color: darkgreen !important;
+    box-shadow: 0.5em 0.5em 1em black; }
+
+/*Onderkant van de website voor de ouders*/
+.DesOuders {
+  background: url("../images/BGimages/groovepaper.png");
+  padding: 1em;
+  color: black;
+  box-shadow: 0.5em 0.5em 3em black;
+  margin-bottom: 2em;
+  margin-top: 8em; }
+
+/*Caroussel die je terugvind op de homepagina voor de ouders*/
+#myCarousel {
+  margin-top: -1em;
+  margin-right: -1em;
+  margin-left: -1em; }
+
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  margin-top: -8em; }
+  .carousel .item {
+    height: 500px;
+    background-color: #777; }
+
+.carousel-caption {
+  color: black !important;
+  z-index: 10; }
+
+.caption {
+  margin-top: -1em;
+  text-align: center; }
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px; }
+
+/*Titels die je terugvind op de caroussel*/
+.carrTitle {
+  display: block;
+  background-color: purple;
+  padding: 0.2em;
+  width: 75%; }
+
+.carrUitleg2, .carrUitleg {
+  font-family: 'existence_light';
+  color: darkblue;
+  display: block;
+  text-shadow: none;
+  padding: 0.2em; }
+
+.carrUitleg {
+  width: 20em;
+  background: url("../images/BGimages/linedpaper.png"); }
+
+/*De drie kolommen onder de caroussel*/
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center; }
+  .marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px; }
+.marketing h2 {
+  font-weight: normal; }
+
+/*Footer*/
+footer {
+  margin-left: 5%; }
+  footer a:link, footer a:visited {
+    color: orchid; }
+
+/*Links in de webpagina linkOuders*/
+.intLinks li {
+  list-style-type: none; }
+  .intLinks li a {
+    display: block;
+    padding: 0.7em;
+    margin: 1em;
+    color: white;
+    border-radius: 0.5em;
+    box-shadow: 0.5em 0.5em 1em black; }
+    .intLinks li a:hover, .intLinks li a:focus {
+      text-decoration: none;
+      box-shadow: 0.2em 0.2em 0.7em black; }
+  .intLinks li .linkYt {
+    background: darkred; }
+  .intLinks li .linkTw {
+    background: #00aced; }
+  .intLinks li .linkFb {
+    background: #3b5998; }
+  .intLinks li .linkRest {
+    background: #8CA834; }
+
+/*CSS voor aanwezigheidslijst aanduid systeem*/
+input[type="checkbox"].checkbox {
+  display: none; }
+  input[type="checkbox"].checkbox + label {
+    position: absolute;
+    border: 5px solid #90c85f;
+    width: 90%;
+    height: 95%;
+    /*label styling*/
+    vertical-align: baseline;
+    white-space: nowrap;
+    box-shadow: none;
+    margin-left: -3px;
+    margin-top: -2px;
+    cursor: pointer;
+    cursor: hand; }
+  input[type="checkbox"].checkbox:checked + label {
+    border: 5px outset #b94a48;
+    box-shadow: inset 0.1em 0.1em 1em black; }
+  input[type="checkbox"].checkbox:checked + .thumbnail {
+    box-shadow: none !important; }
+
+/*thumbnails die je kan terugvinden op de verschillende paginas*/
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  background: url("../images/BGimages/groovepaper.png");
+  box-shadow: 0.5em 0.5em 1em black !important;
+  -webkit-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease; }
+  .thumbnail:hover, .thumbnail:focus {
+    box-shadow: none !important;
+    -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease; }
+
+/*Onderkant voor leerkrachten*/
+.OnderWeb {
+  width: 80%;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em; }
+
+.OnderWeb {
+  width: 80%;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em; }
+
+.onderwebBerichten {
+  margin-top: -5em; }
+
+/*Collapse die je kan terugvinden op de detail pagina van de leerling voor leerkrachten*/
+.Collapse {
+  cursor: pointer;
+  cursor: hand;
+  padding-left: 1em;
+  font-family: 'blokletters_potloodpotlood';
+  font-size: 1.1em;
+  color: white; }
+  .Collapse:hover, .Collapse:focus {
+    color: orchid;
+    text-decoration: none; }
+
+.Colldivider {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+/*header voor inlogpagina*/
+.headerInlog {
+  width: 100%;
+  height: 3.5em;
+  background: none;
+  border-bottom: none;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 15em;
+  border-radius: 0;
+  box-shadow: none; }
+
+/*p klasse*/
+p.form-title {
+  font-family: 'blokletters_potloodpotlood' , sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  margin-top: 5%;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+/*Kleine footer op login pagina*/
+.posted-by {
+  position: absolute;
+  bottom: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.66);
+  padding: 10px; }
+  .posted-by a:link, .posted-by a:visited {
+    color: orchid; }
+
+/*dialoog die je krijgt als je een verkeerd wachtwoord opgeeft*/
+.ui-dialog {
+  background: url("../images/BGimages/linedpaper.png") !important;
+  border: none !important;
+  box-shadow: 0.1em 0.1em 1em black;
+  border-radius: 0 !important; }
+  .ui-dialog-titlebar {
+    background: none !important;
+    border: none !important; }
+
+/*Container voor de webpaginas van leerkarcht en admin*/
+.wikkel {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  max-height: 100%; }
+
+/*container voor webpaginas ouders*/
+.container-fluid {
+  width: 95%; }
+
+/*CSS voor de links die je kan terugvinden in de paginas vakkenlijst, testenlijst*/
+.LinkDes, .LinkDesBerichten {
+  display: block;
+  width: 90%;
+  color: #000F55;
+  margin: 1em;
+  padding: 1em;
+  text-decoration: none;
+  background: url("../images/BGimages/linedpaper.png");
+  box-shadow: 0 0 1em black;
+  font-family: existence_light;
+  font-weight: bolder;
+  font-size: 1.1em;
+  -webkit-transition: box-shadow 0.5s ease, margin 0.5s ease, padding 0.5s ease;
+  transition: box-shadow 0.5s ease, margin 0.5s ease, padding 0.5s ease; }
+  .LinkDes:hover, .LinkDesBerichten:hover, .LinkDes:focus, .LinkDesBerichten:focus {
+    border-left: 5px solid purple;
+    border-right: 5px solid purple;
+    color: purple;
+    text-decoration: none;
+    border-radius: 0.1em;
+    box-shadow: none;
+    -webkit-transition: box-shadow 0.5s ease, border-left 0.5s ease, border-right 0.5s ease;
+    transition: box-shadow 0.5s ease, border-left 0.5s ease, border-right 0.5s ease; }
+
+.LinkDesBerichten {
+  background: url("../images/BGimages/cream_pixels.png"); }
+  .LinkDesBerichten:hover, .LinkDesBerichten:focus {
+    border-left: 5px solid darkred;
+    border-right: 5px solid darkred;
+    color: darkred; }
+
+/*CSS voor de links die je kan terugvinden op de pagina klassenlijst voor de admin*/
+.DesKlas {
+  display: block;
+  width: 90%;
+  color: black;
+  margin: 0.5em;
+  padding: 1em;
+  text-decoration: none;
+  background: url("../images/BGimages/linedpaper.png");
+  box-shadow: 1em 1em2em #4d4d4d;
+  font-family: existence_light; }
+
+/*CSS voor de webpaginas van de ouders*/
+.desOuders {
+  margin-bottom: 1em; }
+
+/*Navbar glyphicons van de ouders*/
+.linkGly {
+  width: 100%; }
+  .linkGly.linkHomeGly {
+    margin-left: 0.8em; }
+  .linkGly.linkGegGly {
+    margin-left: 1.7em; }
+  .linkGly.linkPuntGly {
+    margin-left: 1em; }
+  .linkGly.linkAgGly {
+    margin-left: 1.2em; }
+  .linkGly.linksGly {
+    margin-left: 0.4em; }
+  .linkGly.linkuitGly {
+    margin-left: 1.5em; }
+
+.navbarOuders {
+  background: none !important;
+  border: none !important;
+  margin-bottom: 2em; }
+
+/*Img verandert van grootte*/
+.MobileMenuImg {
+  height: 100% !important;
+  width: 100% !important; }
+
+/*tabel die je terugvind op de webpagina overgang bij de admin*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background: purple !important;
+  cursor: default; }
+
+/*de verschillende grafieken*/
+.grafiek {
+  width: 100%; }
+
+.grafiekOuders {
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-top: 2em;
+  box-shadow: 1em 1em 2.5em black; }
+
+.BerichtenInfoTekst {
+  padding-top: 1em;
+  color: darkblue; }
+
+.Berichtenvenster {
+  background: url("../images/BGimages/linedpaper.png");
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2.5%;
+  box-shadow: 0.5em 0.5em 1em black; }
+
+.bericht {
+  margin: 0 auto;
+  margin-bottom: 2.5%; }
+  .bericht pre {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    color: darkblue;
+    margin: 2% auto; }
+
+.verplicht {
+  border-width: 3px;
+  border-color: #FF4500; }
+
+.display {
+  display: none; }
+
+.nietGelezen {
+  color: darkred;
+  width: 1em;
+  padding-top: 0.1em; }
+
+.testevent {
+  background: darkred;
+  /* default BACKGROUND color */
+  border: 1px solid darkred;
+  box-shadow: 0 0 1em black;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+  .testevent:hover {
+    background: lightcoral;
+    /* default BACKGROUND color */
+    border: 1px solid lightcoral;
+    box-shadow: none;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+
+.evenement {
+  background: #B84600;
+  /* default BACKGROUND color */
+  border: 1px solid #B84600;
+  box-shadow: 0 0 1em black;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  padding: 0.5em;
+  width: 100%; }
+  .evenement:hover {
+    background: #FF9452;
+    /* default BACKGROUND color */
+    border: 1px solid #FF9452;
+    box-shadow: none;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+
+.fc-state-highlight {
+  /* <td> today cell */
+  /* TODO: add .fc-today to <th> */
+  background-color: rgba(95, 0, 130, 0.7) !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0 0 1em black;
+  color: white !important; }
+
+.fc-sun, .fc-sat {
+  background-color: rgba(0, 41, 130, 0.5);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white !important;
+  font-weight: bold !important; }
+
+.has-error .form-control,
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error .form-control-feedback {
+  color: #FF2600;
+  border-color: #FF2600; }
+
+.input-group-addon {
+  background: none !important;
+  border: none !important;
+  font-weight: bold;
+  color: darkblue;
+  font-family: existence_light; }
+
+.alert {
+  box-shadow: 0em 0em 1em black; }
+
+.AgendaDialog #title {
+  font-family: blokletters_potloodpotlood;
+  font-weight: bold;
+  height: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: darkgreen; }
+.AgendaDialog label {
+  color: darkblue;
+  font-family: existence_light; }
+.AgendaDialog textarea {
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: darkblue; }
+
+.ui-button-text {
+  background: none;
+  background-color: purple !important;
+  border-color: purple !important;
+  border-radius: 0;
+  color: white; }
+
+.ui-button, .ui-state-default {
+  background: none;
+  border-radius: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 1em;
+  letter-spacing: 1px;
+  background-color: purple !important;
+  border-color: purple !important;
+  margin-bottom: 0.5em;
+  box-shadow: 0 0 1em black;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+  .ui-button:hover, .ui-button:focus, .ui-state-default:hover, .ui-state-default:focus {
+    color: white !important;
+    background-color: #8E5391 !important;
+    border-color: #8E5391 !important;
+    box-shadow: 0 0 0.2em black;
+    -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; }
+
+/*mobiel versie website*/
+@media only screen and (max-width: 768px) {
+  /*navigatie voor mobiele website*/
+  .navbar {
+    background: url("../images/BGimages/linedpaper.png");
+    padding-bottom: 0.5em;
+    box-shadow: 0.5em 0.5em 1em black;
+    /*onderkant van de mobiele website*/ }
+    .navbar h1, .navbar h2 {
+      color: darkblue !important; }
+    .navbar ul > li > a:link, .navbar ul > li > a:visited {
+      color: darkblue !important;
+      font-weight: bold; }
+    .navbar ul > li > a:hover, .navbar ul > li > a:focus {
+      color: darkgreen !important;
+      border-bottom: none !important; }
+    .navbar ul .active > a:link, .navbar ul .active > a:visited {
+      color: darkgreen !important;
+      border-bottom: none !important;
+      font-weight: bold; }
+    .navbar .dropdown-menu {
+      color: darkgreen !important;
+      box-shadow: none !important; }
+    .navbar-toggle {
+      margin-top: 1.5em; }
+
+  .OnderWeb {
+    margin-top: -3em; }
+
+  /*Forms voor de mobiele website*/
+  form [type="checkbox"].checkbox + label {
+    position: absolute;
+    width: 92%;
+    height: 100%; }
+
+  #overgang input[type="checkbox"].checkbox + label {
+    position: absolute;
+    width: 92%;
+    height: 100%; }
+
+  .mobileVersNon > li > a > span {
+    display: none; }
+
+  /*Carousel voor de mobiele website*/
+  #myCarousel {
+    height: 250px; }
+
+  .carousel .item {
+    height: 250px;
+    background-color: #777; }
+
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 250px; }
+
+  .carrTitle {
+    display: block;
+    padding: 0.2em;
+    width: 75%;
+    font-size: 1.5em; } }
+/*website voor grotere schermen*/
+@media all and (min-width: 1366px) {
+  .wikkel {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .container-fluid {
+    width: 1200px !important;
+    margin-left: auto;
+    margin-right: auto; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1 @@
+jpgraph is ter aanvulling van a_grafiek.php

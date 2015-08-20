@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<link rel='stylesheet' href='./cupertino/theme.css' />
+<link href='./css/fullcalendar_1.css' rel='stylesheet' />
+<link href='./css/fullcalendar.print_1.css' rel='stylesheet' media='print' />
+<script src='./js/jquery-1.9.1.min.js'></script>
+<script src='./js/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='./js/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		var calendar = $('#calendar').fullCalendar({
+                        editable: false,
+                        theme: true,
+                        events: "http://localhost/smartschool/smartschool/events.php",
+                    selectable: false
+                    
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+
+	#calendar {
+		width: 80%;
+		margin: 0 auto;
+		}
+
+</style>
+</head>
+<body>
+<div id='calendar'></div>
+</body>
+</html>

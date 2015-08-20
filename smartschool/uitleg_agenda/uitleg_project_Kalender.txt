@@ -1,0 +1,33 @@
+Wat moet er aangepast worden?
+
+*default.hmtl en agenda_ouders.html
+
+	default html --> voor leerkracht
+        agenda_ouders.htm --> voor ouders
+
+*agenda.js
+
+	eigen javascript om de agenda te laten werken
+
+*tabel 'evenement' in dbase smartschool
+
+CREATE TABLE IF NOT EXISTS `evenement` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `title` varchar(255) COLLATE utf8_bin NOT NULL,
+ `start` datetime NOT NULL,
+ `end` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+*laatste punt
+koppelen aan de link agenda van html-pagina leerkrachten: default.html
+koppelen aan de link agenda van html-pagina ouders; agenda_ouders.html
+
+eventueel in het begin,
+ <a href="default.html" target="blank">
+ <a href="agenda_ouders.html" target="blank">
+-->opent een nieuw venster in de browser
+
+Kevin kan dan verder afwerken
+
+		

@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'blokletters_potloodpotlood';
+    src: url('../fonts/potlood/Blokletters-Potlood-webfont.eot');
+    src: url('../fonts/potlood/Blokletters-Potlood-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.woff') format('woff'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.ttf') format('truetype'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.svg#blokletters_potloodpotlood') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+background-image: url('../images/BGimages/bgHomeInlog.jpg');
+  -webkit-transform: translate3d(0, 2, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+.pace .pace-progress:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  content:"Smartschool " attr(data-progress-text) ;
+  font-family: "blokletters_potloodpotlood", sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
+  line-height: 1;
+  text-align: right;
+  color: white;
+}
+@media only screen and (max-width : 768px) {
+
+.pace .pace-progress:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content:"Smartschool " attr(data-progress-text) ;
+  font-family: "blokletters_potloodpotlood", sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 1;
+  text-align: right;
+  color: white;
+} 
+}

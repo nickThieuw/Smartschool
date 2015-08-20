@@ -1,0 +1,1108 @@
+@import 'Colors';
+@import 'Foto';
+/*@font-face*/
+/*De font 'existence_light'*/
+@font-face {
+    font-family: 'existence_light';
+    src: url('../fonts/existence_light/Existence-Light-webfont.eot');
+    src: url('../fonts/existence_light/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/existence_light/Existence-Light-webfont.woff') format('woff'),
+         url('../fonts/existence_light/Existence-Light-webfont.ttf') format('truetype'),
+         url('../fonts/existence_light/Existence-Light-webfont.svg#existence_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*de font 'blokletters_potloodpotlood'*/
+@font-face {
+    font-family: 'blokletters_potloodpotlood';
+    src: url('../fonts/potlood/Blokletters-Potlood-webfont.eot');
+    src: url('../fonts/potlood/Blokletters-Potlood-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.woff') format('woff'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.ttf') format('truetype'),
+         url('../fonts/potlood/Blokletters-Potlood-webfont.svg#blokletters_potloodpotlood') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//mixin voor CSS3 transitions
+@mixin transition($transition...) {
+        -webkit-transition:$transition;
+        transition:$transition;
+}
+
+//mixin voor CSS3 border-radius
+@mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+}
+
+/*Standaard*/
+*{
+    margin: 0;
+    padding:0;
+}
+
+/*Body voor zowel leerkracht als admin*/
+body{
+    margin: 0;
+    background: url($bodyBackground) repeat;
+    color:$bodyFontColor;
+}
+/*Body voor Ouders*/
+#bodyOuders{
+            hr{
+            border-color: $OudersH1Color;
+            }
+            h2{
+            color: $OudersH2Color !important;
+            }
+            .OnderWebDetailOuders{
+            font-family: 'existence_light';
+            font-size: 1.1em;
+            color: $OnderKantWebOudersFontColor;
+}
+}
+
+/*Titel klassen*/
+h1{
+    color: $h1Color !important;
+    font-family: blokletters_potloodpotlood !important;
+    margin-left: 1em !important;
+}
+h2{
+@extend h1;
+margin-left:0em !important;
+margin-bottom:0.5em;
+}
+h3{
+    font-family: 'existence_light';
+    font-size:1.25em !important;
+    font-weight:bold;
+}
+
+/*Vormgeving van de forms, zowel buttons als de */
+form{
+          label{
+        font-family: existence_light;
+  color: white;
+  font-weight:bold;
+  }
+      &.formDes{
+               [type="submit"]{
+                   font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    margin-top: 1em;
+                    margin-bottom: 1em;    
+                    outline: 0;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    background-color: $ColorBtnSubmit;
+                    border-color: $ColorBtnSubmit;
+                    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+                    box-shadow: 0 0 1em black;
+                    &:hover, &:focus{
+                          background-color: $ColorBtnSubmitHoverFocus;
+                          border-color: $ColorBtnSubmitHoverFocus;
+                          box-shadow: 0 0 0.2em black !important;
+                          @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+ 
+                    }
+               }
+      }
+      &.BerichtBekijken{
+      margin-bottom: 2.5%;
+          textarea {
+            background: none;
+            color: blue;
+            width: 80%;
+            height: 150px;
+            margin: 2% 0;
+           
+        }
+                                 input[type="submit"]{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit;
+    border-color: $ColorBtnSubmit;
+    margin-bottom: 1em;
+    box-shadow: 0em 0em 1em black;
+        @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+                background-color: $ColorBtnSubmitHoverFocus;
+        border-color: $ColorBtnSubmitHoverFocus;
+        box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+  }
+      }
+      &.Berichten{
+      width: 80%;
+      background:url($BerichtenAchtergrond);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1em;
+      box-shadow: 0 0 1em black;
+    label{
+    color:darkblue;
+    }
+    select{
+  font-family: blokletters_potloodpotlood;
+  font-weight: bold;
+      height: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: $formBerichtColor;
+  }
+    input[type="text"]{
+  font-family: blokletters_potloodpotlood;
+  font-weight: bold;
+      height: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: $formBerichtColorHoofding;
+  }
+    textarea{
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: $formBerichtColor; }
+  
+                          input[type="submit"]{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit;
+    border-color: $ColorBtnSubmit;
+    margin-bottom: 1em;
+    box-shadow: 0 0 1em black;
+        @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+                background-color: $ColorBtnSubmitHoverFocus;
+        border-color: $ColorBtnSubmitHoverFocus;
+        box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+  }
+  input[type="reset"]{
+  @extend input[type="submit"];
+     background-color: $ColorBtnReset;
+    border-color: $ColorBtnReset;
+    box-shadow: 0 0 1em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+                background-color: $ColorBtnResetHoverFocus;
+        border-color: $ColorBtnResetHoverFocus;
+        box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+  }
+  }
+      &.Verwerken {
+                input[type="text"], input[type="number"], input[type="email"], input[type="password"]{
+                     width: 100%;
+                     margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid $VerwerkenFormInputBorder;
+    outline: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    outline: 0;
+    color:white;
+                        }
+                        input[type="submit"]{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit;
+    border-color: $ColorBtnSubmit;
+    margin-bottom: 1em;
+    box-shadow: 0 0 1em black;
+        @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+                background-color: $ColorBtnSubmitHoverFocus;
+        border-color: $ColorBtnSubmitHoverFocus;
+        box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+}
+
+  a{
+  @include transition(color 0.5s ease);
+  &:hover, &:focus{
+    @include transition(color 0.5s ease);
+  color: $FormLinkColorHoverFocus;
+  }
+  }
+  label
+{
+    font-size: 12px;
+    font-weight: 400;
+}
+}
+&.VerwerkenWit{
+input[type="number"]{
+color:darkblue !important;
+border-bottom: 1px solid darkblue;
+}
+}
+      &.login {
+          width: 250px;
+          margin: 0 auto;
+                label, a{
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: $FormLoginLabelColor;
+}
+            input[type="submit"]
+{
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit;
+    border-color: $ColorBtnSubmit;
+    box-shadow: 0 0 1em black;
+      @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+}
+}
+}
+
+/*checkbox voor webpaginas met overgang*/
+#overgang {
+              input[type="checkbox"].checkbox {
+    display: none;
+    + label {
+    position: absolute;
+    border: 5px outset  $BorderColorFout;
+    width: 90%;
+    height: 95%;
+    /*label styling*/
+    vertical-align: baseline;
+    white-space: nowrap;
+        box-shadow: inset 0.1em 0.1em 1em black;
+
+    margin-left: -3px;
+    margin-top: -2px;
+    cursor: pointer;
+    cursor: hand;
+    
+}
+&:checked{
+  + label{
+      border: 5px solid $BorderColorGoed;
+        box-shadow: none;
+  }
+}
+}
+}
+
+/*Staandaard buttonvormgeving voor alle buttons*/
+.btnVormgeving{
+
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit;
+    border-color: $ColorBtnSubmit;
+    margin-bottom:0.5em;
+    box-shadow: 0 0 1em black;
+        @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+    color: $ColorBtnSubmitHoverFocusText;
+    background-color: $ColorBtnSubmitHoverFocus;
+    border-color: $ColorBtnSubmitHoverFocus;
+    box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+}
+
+/*Navigatiebalk*/
+.nav-brand{
+            &:hover ,&:focus{
+                  text-decoration: none !important;
+                  cursor:default;
+            }
+}
+
+.nav{
+    font-family: 'existence_light' !important;
+    font-size:1.1em !important;
+    font-weight:bold;
+            .active {
+                      a{
+                        background: none !important;
+                        color: $NavbarLinkColorHoverFocus !important;
+                        border-bottom: $NavbarLinkColorHoverFocus solid 1px !important;
+                        }
+            }
+}
+/*Volledige achtergrond avn de navigatie*/
+.navbar{
+        background: none;
+        color: $NavbarLinkColor;
+        border: 0;
+    
+        li > a{
+            &:link, &:visited{
+                  color:$NavbarLinkColor;
+            }
+    
+            &:hover, &:focus, &:active{
+                  background: none !important;
+                  color: $NavbarLinkColorHoverFocus !important;
+                  border-bottom: $NavbarLinkColorHoverFocus solid 1px !important;
+            }
+     }
+}
+
+/*De dropdownmenu van de navigatiebalk*/
+.dropdown-menu{
+@include border-radius(0);
+                width: 125% !important;
+                background: url($dropdownMenuBackground);
+                
+                &> li > a{
+                    &:link, &:visited{
+                            color: $DropdownMenuLinkColor ;
+                            border-bottom: none !important;
+                            font-weight:bold;
+                    }
+                    
+                    &:hover, &:focus{
+                            color: $DropdownMenuLinkColorHoverFocus ;
+                            border-bottom: none !important;
+                    }
+                }
+}
+
+/*Wanneer je naar beneden scrollt op de webpagina verandert de achtergrond van de navigatiebalk, dit is de CSS code hiervoor*/
+#nav{
+    &.affix{
+    background: url($navAffixBackground);
+    padding-bottom: 0.5em;
+    box-shadow: 0 0 1em black;
+    h1{
+    color: $NavbarAffixH1 !important;
+    }
+    
+    ul{
+        li a{
+              &:link, &:visited{
+                  color: $NavbarAffixLinks !important;
+              }
+              
+              &:hover, &:focus{
+                      color: $NavbarAffixLinksHoverFocus !important;
+                      border-bottom-color: $NavbarAffixLinksHoverFocus !important;
+              }
+    }
+        .active a{
+              &:link, &:visited{
+                      color: $NavbarAffixActiveLinks !important;
+                      border-bottom-color: $NavbarAffixActiveLinks !important;
+              }
+        }
+    }
+    .dropdown-menu{
+        color: $NavbarAffixDropdownlink !important;
+        box-shadow: 0.5em 0.5em 1em black;
+    }
+}
+}
+
+/*Onderkant van de website voor de ouders*/
+.DesOuders{
+    background: url($AchtergrondOuders);
+    padding: 1em;
+    color: black;
+    box-shadow: 0.5em 0.5em 3em black;
+    margin-bottom: 2em;
+    margin-top: 8em;
+}
+
+/*Caroussel die je terugvind op de homepagina voor de ouders*/
+#myCarousel{
+    margin-top: -1em;
+    margin-right: -1em;
+    margin-left: -1em;
+}
+
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  margin-top: -8em;
+  .item{
+    height: 500px;
+  background-color: $CarousselItemBackground;
+  }
+}
+.carousel-caption{
+    color: $CarousselCaptionColor !important;
+      z-index: 10;
+}
+.caption{
+    margin-top: -1em;
+    text-align: center;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+/*Titels die je terugvind op de caroussel*/
+.carrTitle{
+    display: block;
+    background-color:$CarousselCaptionbackground;
+    padding: 0.2em;
+    width: 75%;
+}
+.carrUitleg2{
+    font-family: 'existence_light';
+    color: $CarousselCaptionHeaderColor;
+    display: block;
+    text-shadow: none;
+    padding: 0.2em;
+}
+.carrUitleg{
+@extend .carrUitleg2;
+    width: 20em;
+    background: url($CarousselAchterItem);
+}
+
+/*De drie kolommen onder de caroussel*/
+.marketing {
+      .col-lg-4 {
+          margin-bottom: 20px;
+          text-align: center;
+          p {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+      }
+      h2 {
+         font-weight: normal;
+      }
+}
+
+/*Footer*/
+footer{
+    margin-left: 5%;
+      a{
+        &:link, &:visited{
+         color: $footerColor;
+        }
+      }
+}
+
+/*Links in de webpagina linkOuders*/
+.intLinks {
+          li{
+            list-style-type: none;
+            a{
+              display: block;
+              padding: 0.7em;
+              margin: 1em;
+              color: white;
+              border-radius: 0.5em;
+              box-shadow: 0.5em 0.5em 1em black;
+              &:hover, &:focus{
+                  text-decoration: none;
+                  box-shadow: 0.2em 0.2em 0.7em black;
+              }
+            }
+            .linkYt{
+              background: $LinkYoutubeOuders;
+            }
+            .linkTw{
+              background: $LinkTwitterOuders;
+            }
+            .linkFb{
+              background: $LinkFacebookOuders;
+            }
+            .linkRest{
+              background: $LinkRestOuders;
+            }
+}
+}
+
+/*CSS voor aanwezigheidslijst aanduid systeem*/
+ input[type="checkbox"].checkbox {
+    display: none;
+    + label{
+        position: absolute;
+    border: 5px solid $BorderColorGoed;
+    width: 90%;
+    height: 95%;
+    /*label styling*/
+    vertical-align: baseline;
+    white-space: nowrap;
+    box-shadow: none;
+    margin-left: -3px;
+    margin-top: -2px;
+    cursor: pointer;
+    cursor: hand;
+    }
+    &:checked{
+    + label{
+        border: 5px outset $BorderColorFout;
+        box-shadow: inset 0.1em 0.1em 1em black
+    }
+    + .thumbnail {
+    box-shadow: none !important;
+}
+    }
+}
+
+/*thumbnails die je kan terugvinden op de verschillende paginas*/
+.thumbnail{
+    padding: 0;
+    border-radius: 0;
+    background: url($AchtergrondThumbnail);
+    box-shadow: 0.5em 0.5em 1em black !important;
+    @include transition(box-shadow 0.5s ease);
+    &:hover, &:focus{
+    box-shadow: none !important;
+    @include transition(box-shadow 0.5s ease);
+    }
+}
+
+/*Onderkant voor leerkrachten*/
+.OnderWeb{
+    width: 80%;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+.OnderWeb{
+    width: 80%;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+.onderwebBerichten{
+margin-top:-5em;
+}
+/*Collapse die je kan terugvinden op de detail pagina van de leerling voor leerkrachten*/
+.Collapse{
+        cursor: pointer;
+    cursor: hand;
+    padding-left: 1em;
+    font-family: 'blokletters_potloodpotlood';
+    font-size: 1.1em;
+    color: $ColorCollapse;
+    &:hover , &:focus{
+    color: $ColorCollapseHoverFocus;
+    text-decoration: none;
+}
+}
+.Colldivider{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*header voor inlogpagina*/
+.headerInlog{
+    width: 100%;
+    height: 3.5em;
+    background:none;
+    border-bottom: none;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 15em;
+    border-radius: 0;
+       box-shadow: none;
+}
+
+/*p klasse*/
+p{
+    &.form-title{
+            font-family: 'blokletters_potloodpotlood' , sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: $FormLoginTitleLabelColor;
+            margin-top: 5%;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+    }
+}
+/*Kleine footer op login pagina*/
+.posted-by{
+            position: absolute;
+            bottom: 26px;
+            margin-left:auto;
+            margin-right: auto;
+            color: $PostedByLabelColor;
+            background-color: $CustomFooterLoginBGColor;
+            padding: 10px;
+            a{
+              &:link, &:visited{
+                            color: $CustomFooterLoginLinks;
+              }
+            }
+}
+/*dialoog die je krijgt als je een verkeerd wachtwoord opgeeft*/
+.ui-dialog{
+    background: url($achtergrondLoginDialog) !important;
+    border: none !important;
+    box-shadow: 0.1em 0.1em 1em black;
+        border-radius: 0 !important;
+        &-titlebar{
+          background: none !important;
+          border: none !important;
+}   
+}
+/*Container voor de webpaginas van leerkarcht en admin*/
+.wikkel{
+    margin-top:150px;
+    margin-left: auto;
+    margin-right:auto;
+    overflow: visible;
+    max-height: 100%;
+}
+/*container voor webpaginas ouders*/
+.container-fluid{
+    width: 95%;
+}
+/*CSS voor de links die je kan terugvinden in de paginas vakkenlijst, testenlijst*/
+.LinkDes{
+    display: block;
+    width:90%;
+    color: #000F55;
+    margin: 1em;
+    padding: 1em;
+    text-decoration: none;
+    background: url($LeerkrachtLinksVakkenTesten);
+           box-shadow: 0 0 1em black;
+           font-family:existence_light ;
+    font-weight: bolder;
+    font-size: 1.1em;
+    @include transition(box-shadow 0.5s ease, margin 0.5s ease, padding 0.5s ease);
+    &:hover, &:focus{
+        border-left: 5px solid $LeerkrachtLinksVTBorderColor;
+    border-right: 5px solid $LeerkrachtLinksVTBorderColor;
+     color: $LeerkrachtLinksVTLinkColor;
+     text-decoration: none;
+     border-radius: 0.1em;
+      box-shadow: none;
+      @include transition(box-shadow 0.5s ease, border-left 0.5s ease, border-right 0.5s ease);
+    }
+}
+
+.LinkDesBerichten{
+@extend .LinkDes;
+background: url($BerichtenLinksVakkenTesten);
+    &:hover, &:focus{
+        border-left: 5px solid $BerichtenLinksVTBorderColor;
+    border-right: 5px solid $BerichtenLinksVTBorderColor;
+     color: $BerichtenLinksVTBorderColor;
+    }
+}
+
+/*CSS voor de links die je kan terugvinden op de pagina klassenlijst voor de admin*/
+.DesKlas{
+    display: block;
+    width:90%;
+    color: black;
+    margin: 0.5em;
+    padding: 1em;
+    text-decoration: none;
+    background: url($AchtergrondAdminKlaslijst);
+    box-shadow: 1em 1em2em #4d4d4d;
+    font-family:existence_light ;
+}
+
+/*CSS voor de webpaginas van de ouders*/
+.desOuders{
+    margin-bottom: 1em;
+}
+
+/*Navbar glyphicons van de ouders*/
+.linkGly{
+    width: 100%;
+    
+    &.linkHomeGly{
+        margin-left: 0.8em;
+    }
+    &.linkGegGly{
+    margin-left: 1.7em;
+}
+&.linkPuntGly{
+    margin-left: 1em;
+}
+&.linkAgGly{
+
+    margin-left: 1.2em;
+}
+&.linksGly{
+    margin-left: 0.4em;
+}
+&.linkuitGly{
+    margin-left: 1.5em;
+}
+}
+.navbarOuders{
+    background: none !important;
+    border: none !important;
+    margin-bottom: 2em;
+}
+
+/*Img verandert van grootte*/
+.MobileMenuImg{
+    height: 100% !important;
+    width: 100% !important;
+    
+}
+
+/*tabel die je terugvind op de webpagina overgang bij de admin*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background: purple!important;
+  cursor: default;
+}
+
+/*de verschillende grafieken*/
+.grafiek {
+    width:100%;
+}
+.grafiekOuders{
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-top: 2em;
+    box-shadow: 1em 1em 2.5em black;
+}
+
+        .BerichtenInfoTekst{
+            padding-top: 1em;
+            color: darkblue;
+        }
+        .Berichtenvenster {
+            background: url($BerichtenAchtergrond);
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 2.5%;
+            box-shadow: 0.5em 0.5em 1em black;
+        }
+                .bericht {
+            margin: 0 auto;
+            margin-bottom: 2.5%;
+        pre {
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            color: darkblue;
+            margin: 2% auto;  
+        }
+        }
+
+         .verplicht {
+            border-width: 3px;
+            border-color: #FF4500;
+        }
+
+        .display{
+            display: none;
+        }
+        .nietGelezen{
+            color: darkred;
+            width: 1em;
+            padding-top: 0.1em;
+        }
+        .testevent{
+            background:darkred;/* default BACKGROUND color */
+            border: 1px solid darkred;
+            box-shadow: 0 0 1em black;
+            @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+        
+      &:hover{
+            background:lightcoral;/* default BACKGROUND color */
+            border: 1px solid lightcoral;
+            box-shadow: none;
+            @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+        } 
+        } 
+        .evenement{
+             background:#B84600;/* default BACKGROUND color */
+            border: 1px solid #B84600;
+            box-shadow: 0 0 1em black;
+            @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+            padding:0.5em;
+            width:100%;
+        &:hover{
+            background:#FF9452;/* default BACKGROUND color */
+            border: 1px solid #FF9452;
+            box-shadow: none;
+            @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+        } 
+        }
+        .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
+  background-color: rgba(95, 0, 130, 0.7) !important;
+              -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0 0 1em black;
+  color: white !important;
+  }
+      .fc-sun, .fc-sat{
+background-color: rgba(0, 41, 130, 0.5);
+              -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white !important;
+  font-weight:bold !important;
+  }
+  
+.has-error{ 
+ .form-control,
+ .help-block,
+ .control-label,
+ .radio,
+ .checkbox,
+ .radio-inline,
+ .checkbox-inline,
+ .form-control-feedback {
+  color: #FF2600;
+  border-color: #FF2600;
+}
+}
+
+.input-group-addon{
+background:none !important;
+border:none !important;
+font-weight:bold;
+color:darkblue;
+font-family:existence_light;
+}
+
+.alert{
+    box-shadow: 0em 0em 1em black;
+}
+
+.AgendaDialog{
+     #title{
+  font-family: blokletters_potloodpotlood;
+  font-weight: bold;
+      height: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: $formBerichtColorHoofding;
+  }
+  label{
+    color:darkblue;
+    font-family:existence_light;
+    }
+        textarea{
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 1px black dashed;
+  outline: 0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  outline: 0;
+  color: $formBerichtColor; }
+}
+.ui-button-text{
+background:none;
+    background-color: $ColorBtnSubmit !important;
+    border-color: $ColorBtnSubmit !important;
+    border-radius:0;
+    
+color:white;
+}
+.ui-button, .ui-state-default {
+  background:none;
+  border-radius:0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    background-color: $ColorBtnSubmit !important;
+    border-color: $ColorBtnSubmit !important;
+    margin-bottom:0.5em;
+    box-shadow: 0 0 1em black;
+        @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    &:hover, &:focus{
+    color: $ColorBtnSubmitHoverFocusText;
+    background-color: $ColorBtnSubmitHoverFocus !important;
+    border-color: $ColorBtnSubmitHoverFocus !important;
+    box-shadow: 0 0 0.2em black;
+    @include transition(background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease);
+    }
+}
+/*mobiel versie website*/
+@media only screen and (max-width : 768px) {
+
+/*navigatie voor mobiele website*/
+.navbar {
+    background: url($MobileNavBarbackground);
+    padding-bottom: 0.5em;
+    box-shadow: 0.5em 0.5em 1em black;
+    h1{
+    color: $MobileNavbarH1Color !important;
+}
+
+ul{
+     > li > a{
+  &:link, &:visited{
+  color: $MobileNavbarLinkColor !important;
+  font-weight:bold;
+}
+
+&:hover, &:focus{
+    color: $MobileNavbarLinkColorHoverFocus !important;
+    border-bottom:none !important ;
+}
+  }
+  .active > a{
+    &:link, &:visited{
+      color: $MobileNavbarActiveLinkColor  !important;
+    border-bottom: none !important;
+    font-weight: bold;
+}
+  }
+}
+.dropdown-menu{
+    color: $MobileNavbarDropdownColor  !important;
+     
+    box-shadow: none !important;
+}
+&-toggle{
+    margin-top: 1.5em;
+}
+
+/*onderkant van de mobiele website*/
+}
+.OnderWeb{
+    margin-top: -3em;
+}
+
+/*Forms voor de mobiele website*/
+form{
+[type="checkbox"].checkbox + label {
+    position: absolute;
+    width: 92%;
+    height: 100%;
+}
+}
+#overgang {
+              input[type="checkbox"].checkbox + label{
+               position: absolute;
+    width: 92%;
+    height: 100%;   
+              }}
+
+.mobileVersNon > li > a > span{
+    display: none;
+}
+
+/*Carousel voor de mobiele website*/
+#myCarousel{
+    height: 250px;
+}
+  .carousel .item {
+  height: 250px;
+  background-color: $CarousselItemMobileBackground;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 250px;
+}
+.carrTitle{
+    display: block;
+    padding: 0.2em;
+    width: 75%;
+    font-size: 1.5em;
+}
+    }
+    
+/*website voor grotere schermen*/
+@media all and (min-width: 1366px) {
+    .wikkel{
+        width:1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container-fluid{
+        width:1200px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

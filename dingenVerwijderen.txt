@@ -1,0 +1,3 @@
+map Images:
+=> de hele map 1920
+closeIcon, crisp_paper_ruffles, Christmas-Pattern-PPT-Backgrounds-300x300,12.lined-paper-texture,bgVlieger
